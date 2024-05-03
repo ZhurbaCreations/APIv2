@@ -24,3 +24,15 @@ export default function initializeFirebaseClient(): {
     auth,
   };
 }
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCv_MKYdPt7xV4rt4w8Ob30mNG4g2S0Lus",
+  authDomain: "yoola-auth-api.firebaseapp.com",
+  projectId: "yoola-auth-api",
+  storageBucket: "yoola-auth-api.appspot.com",
+  messagingSenderId: "833741109645",
+  appId: "1:833741109645:web:f27bea3694e88d019ae5c4"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
