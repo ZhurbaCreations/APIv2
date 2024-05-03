@@ -1,22 +1,35 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://gistcdn.githack.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css");
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Inter", sans-serif;
+  height: 100%;
+  font-family: "Gilroy", sans-serif;
 }
 
-a {
-  color: #84309c;
-  text-decoration: none;
+h1 {
+  font-weight: 300;
+  font-size: 32px;
+  margin: 0 0 0 0;
+  padding: 0;
+  color: #22202C;
 }
 
-* {
-  box-sizing: border-box;
+h2 {
+  font-weight: 300;
+  font-size: 14px;
+  margin: 0 0 12px 0;
+  padding: 0;
+  color: #6C757D;
 }
 
-body {
-  color: #e7e8e8;
-  background: #070707;
+h3 {
+  font: 22px 'Gilroy', sans-serif;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+  text-align: center;
 }

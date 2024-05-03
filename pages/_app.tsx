@@ -1,16 +1,21 @@
 import type { AppProps } from "next/app";
-import { ThirdwebProvider } from "@thirdweb-dev/react";
+import { ThirdwebProvider, metamaskWallet } from "@thirdweb-dev/react";
 import "../styles/globals.css";
 
-// This is the chain your dApp will work on.
-// Change this to the chain your app is built for.
-// You can also import additional chains from `@thirdweb-dev/chains` and pass them directly.
-const activeChain = "ethereum";
-
 function MyApp({ Component, pageProps }: AppProps) {
+  // This is the chain your dApp will work on.
+  const activeChain = "mumbai";
+
   return (
     <ThirdwebProvider
-      clientId={process.env.NEXT_PUBLIC_TEMPLATE_CLIENT_ID}
+
+    supportedWallets={[
+      metamaskWallet(),
+    ]}
+
+      authConfig={{
+        domain: process.env.NEXT_PUBLIC_THIRDWEB_AUTH_DOMAIN as string,
+      }}
       activeChain={activeChain}
     >
       <Component {...pageProps} />
