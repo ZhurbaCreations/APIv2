@@ -7,7 +7,7 @@ export default function initializeFirebaseClient(): {
   db: Firestore;
   auth: Auth;
 } {
-  const firebaseApp = initializeApp({
+  const firebaseConfig = initializeApp({
     apiKey: process.env.NEXT_PUBLIC_API_KEY,
     authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
     projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
@@ -16,8 +16,8 @@ export default function initializeFirebaseClient(): {
     appId: process.env.NEXT_PUBLIC_APP_ID,
   });
 
-  const db = getFirestore(firebaseApp);
-  const auth = getAuth(firebaseApp);
+  const db = getFirestore(firebaseConfig);
+  const auth = getAuth(firebaseConfig);
 
   return {
     db,
