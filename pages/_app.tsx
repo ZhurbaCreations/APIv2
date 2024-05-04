@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     ]}
 
       authConfig={{
-        domain: process.env.NEXT_PUBLIC_THIRDWEB_AUTH_DOMAIN as string,
+        domain: process.env.NEXT_PUBLIC_THIRDWEB_AUTH_DOMAIN  || "yoola-auth-api.firebaseapp.com" as string,
       }}
       activeChain={activeChain}
     >
