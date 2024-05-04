@@ -10,7 +10,7 @@ export default async function login(
   const payload = req.body.payload;
  
   const { address, error } = await verifyLogin(
-    process.env.NEXT_PUBLIC_THIRDWEB_AUTH_DOMAIN as string,
+    process.env.NEXT_PUBLIC_THIRDWEB_AUTH_DOMAIN  || "yoola-auth-api.firebaseapp.com" as string,
     payload,
   );
   if (!address) {
