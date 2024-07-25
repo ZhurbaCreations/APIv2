@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThirdwebProvider
 
     supportedWallets={[
-      metamaskWallet(),
+      
     ]}
 
       authConfig={{
